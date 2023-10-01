@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja Paliw</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <div id="baner-lewy">
+        <h1>Stacja Paliw</h1>
+    </div>
+    <div id="baner-prawy">
+        <a href="stacja.html"><img src="home.png" alt="home"></a>
+        <a href="obliczenia.html"><img src="znak.png"></a>
+    </div>
+    <div id="główny">
+        <h3>Oblicz koszt paliwa</h3>
+        Rodzaj Paliwa(1-benzyna, 2-olej napędowy):<br>
+        <input type="number" id="Rodzaj_Paliwa">
+        Ile litrów?<br>
+        <input type="number" id="ile_paliwa">
+        <button type="submit" id="Oblicz" onclick="oblicz()">Oblicz</button>
+        <p id="wynik"></p>
+    </div>
+    
+    <div id="lewy">
+        <a href="kwerendy.txt">Pobierz kwerendy</a>
+    </div>
+    <div id="prawy">
+        <img src="samochod.png" alt="samochód">
+    </div>
+    <footer>
+        <p>Stronę opracował: Alexander Trembiński</p>
+    </footer>
+    <script>
+        function oblicz(){
+            var a = document.getElementById("ile_paliwa").value;
+            var b = document.getElementById("Rodzaj_Paliwa").value;
+            if(b == 1){
+                document.getElementById("wynik").innerHTML = "koszt paliwa " + a*4 + " zł";
+            }if(b == 2){
+                document.getElementById("wynik").innerHTML = "koszt paliwa " + a*3.5 + " zł";
+            }else{
+                document.getElementById("wynik").innerHTML = "koszt paliwa " + a*0 + " zł";
+            }
+        }
+    </script>
+</body>
+</html>

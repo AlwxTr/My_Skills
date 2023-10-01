@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="góra-1">
+        <img src="logo.jpg" alt="matematyka">
+    </div>
+    <div id="góra-2">
+        <h1>Pomocnik Matemtyczny</h1>
+    </div>
+    <div id="góra-3">
+        <a href="dzialania.html">Działania</a>
+    </div>
+    <div id="góra-4">
+        <a href="mnozenie.html">Tabliczka mnożenia</a>
+    </div>
+    <div id="lewy">
+        <h3>Proste działania</h3>
+        liczba A:<input type="number" id="LiczbaA"><br>
+        liczba B:<input type="number" id="LiczbaB"><br>
+        <button type="submit" onclick="dodawanie()">+</button>
+        <button type="submit" onclick="odejmowanie()">-</button>
+        <button type="submit" onclick="mnożenie()">*</button>
+        <button type="submit" onclick="dzielenie()">/</button>
+        <button type="submit" onclick="potęga()">A^B</button>
+        <p id="wynik"></p>
+
+    </div>
+    <div id="prawy">
+        <ul>
+            <li>Dodawanie</li>
+            <li>Odejmowanie</li>
+            <li>Mnożenie</li>
+            <li>Dzielenie</li>
+            <li>Potęgowanie</li>
+        </ul>
+    </div>
+    <script>
+        function dodawanie(){
+            var a = document.getElementById("LiczbaA").value;
+            var b = document.getElementById("LiczbaB").value;
+            var c = (a+b)
+            document.getElementById("wynik").innerHTML = "Wynik:" + c;
+        }
+        function odejmowanie(){
+            var a = document.getElementById("LiczbaA").value;
+            var b = document.getElementById("LiczbaB").value;
+            document.getElementById("wynik").innerHTML = "Wynik:" + (a-b);
+        }
+        function mnożenie(){
+            var a = document.getElementById("LiczbaA").value;
+            var b = document.getElementById("LiczbaB").value;
+            document.getElementById("wynik").innerHTML = "Wynik:" + (a*b);
+        }
+        function dzielenie(){
+            var a = document.getElementById("LiczbaA").value;
+            var b = document.getElementById("LiczbaB").value;
+            document.getElementById("wynik").innerHTML = "Wynik:" + (a/b);
+        }
+        function potęga(){
+            var a = document.getElementById("LiczbaA").value;
+            var b = document.getElementById("LiczbaB").value;
+            document.getElementById("wynik").innerHTML = "Wynik:" + (a^b);
+        }
+    </script>
+    <footer>
+        <p>Autor: Alexander Trembiński</p>
+    </footer>
+</body>
+</html>

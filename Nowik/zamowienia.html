@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <div id="baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+    <nav>
+    <div id="lewy">
+        <section>
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src="obraz.png" alt="sieć komputerowa">
+    </section>
+    </div>
+    <div id="prawy">
+            <table>
+                <th>Produkt</th><th>Jednostka</th><th>Dostępna ilość</th><th>Aktualizacja</th><th>Zamówienie</th>
+                <tr>
+                    <td>Skrętka U/UTP drut</td><td>metr</td><td id="1">20</td><td><button type="submit" onclick="update(1)">Aktualizuj</button></td><td><button type="submit" onclick="zamow()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td>Skrętka U/UTP linka</td><td>metr</td><td id="2">2</td><td><button type="submit" onclick="update(2)">Aktualizuj</button></td><td><button type="submit" onclick="zamow()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td>Wtyki 8P8C</td><td>sztuki</td><td id="3">10</td><td><button type="submit" onclick="update(3)">Aktualizuj</button></td><td><button type="submit" onclick="zamow()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td>Moduły Keystone</td><td>sztuki</td id="4"><td>30</td><td><button type="submit" onclick="update(4)">Aktualizuj</button></td><td><button type="submit" onclick="zamow()">Zamów</button></td>
+                </tr>
+            </table>
+    </div>
+</nav>
+    <script>
+        braki()
+        function update(i){
+            var newnumber = prompt("podaj nową ilość:")
+            document.getElementById(i).innerHTML = newnumber
+            braki() 
+        }
+        function braki(){
+            for(var i = 1;i<5;i++){
+            var a = document.getElementById(i).innerHTML;
+            if(a==0){
+                document.getElementById(i).style.backgroundColor="red";
+            }else if(a<=5){
+                document.getElementById(i).style.backgroundColor="yellow";
+            }else{
+                document.getElementById(i).style.backgroundColor="HoneyDew";
+            }
+
+        }}
+       
+        function zamow(){
+
+        }
+    </script>
+    <footer>
+        <a href="http://sieci.pl" target="_blank">Nasza strona interntowa</a>
+        <p>Stronę przygotował: xyz</p>
+    </footer>
+</body>
+</html>
